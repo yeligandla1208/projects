@@ -1,0 +1,3837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+Hanunoo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    /* @media screen and {
+        
+    } */
+    *{
+        margin:0;
+        padding:0;
+        /* overflow-x: hidden; */
+        
+    }
+    body{
+        background-color: black;
+    }
+    .main{
+        /* border:2px solid;  */
+        height:200%; 
+        width:100%;
+        display: flex; 
+        flex-direction: column;
+    }
+    .navhead{
+        /* border:1px solid red;  */
+        width:100%; 
+        height:10vh; 
+        background-color: rgb(51, 197, 250);
+        color:white; 
+        display: flex; 
+        align-items: center;   
+        justify-content: center;
+    }
+    .woox{
+        font-family: Lato, sans-serif;
+        /* border:1px solid;  */
+        width:15%;
+        height:5vh; 
+        text-align: center; 
+        font-size:35px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+    }
+    .logo{
+        width:70%;
+    }
+    .navside{
+        /* border:1px solid;  */
+        width:70%; 
+        height:5vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: flex-end;
+        gap:5%;
+        font-family:Noto Sans Hanunoo ;
+    }
+    .banner1{
+        background-image: url(../multimedia/images/banner-02.jpg);
+        /* border:2px solid red;  */
+        width:100%; 
+        height:100vh; 
+        display:flex;
+        /* flex-direction:row;  */
+        justify-content: center; 
+    }
+    .banner2{
+        /* border:2px solid white;  */
+        width:100%; 
+        height:100vh; 
+        display:flex; 
+        flex-direction:column; 
+        align-items: center;
+        /* margin-top: 4%; */
+        justify-content: center;
+    }
+    .glimp{
+        /* border: 2px solid white;  */
+        /* font-family: Lato, sans-serif;  */
+        font-family: Poppins, sans-serif;
+        color: white;
+        width:100%; 
+        height:8%; 
+        text-align: center; 
+        /* padding-top:%;  */
+        /* font-size: larger; */
+        /* font-family:Noto Sans Hanunoo ; */
+        font-size: 20px;
+    }
+    .Swizerland{
+        /* border:2px solid white;  */
+        font-family: Poppins, sans-serif;
+        font-weight: 600; 
+        color:white; 
+        width:40%; 
+        text-align: center;
+        font-size:50px ;
+        
+    }
+    .gothere{
+        color: rgb(27, 169, 220); 
+        border:1px solid rgb(27, 169, 220);
+        width:12%; 
+        height:5vh; 
+        border-radius: 25px;
+        text-align: center;
+        padding-top:1%;
+    }
+    .headbodybar{
+        /* border:2px solid white;  */
+        width:83%; 
+        height:15vh; 
+        border-radius: 55px; 
+        background-color: white; 
+        display:flex;
+        align-items: center;
+        justify-content: center; 
+        gap:10%;
+    }
+    /* population/territory/avg price/ bar */
+    .bodybar{
+        /* border:2px solid;  */
+        width:14% ;
+        display:flex;
+        gap:4%;
+        align-items:center;
+    }
+    .innerbodybar{
+        border: 2px solid rgb(27, 169, 220);
+        width:40%; 
+        height:9vh;
+        border-radius:50%; 
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        /* text-align: center; */
+    }
+    .bodybarfont{
+        color:rgb(53, 184, 266);
+        font-size:25px;
+        /* margin-top: 22%; */
+    }
+    .population{
+        color:gray;
+    }
+    .territory{
+        color:gray;
+    }
+    .avgprice{
+        color:gray;
+    }
+    .bodybarlogs{
+        color:rgb(53, 184, 236)
+    }
+    .bodybar1{
+        /* border: 2px solid; */
+        width: 13%; 
+        display:flex; 
+        align-items:center;
+        display:felx; 
+        align-items: center;
+        gap:4%;
+    }
+    .explore1main{
+        /* border:2px solid; */
+        width:10%;
+        /* display: flex; */
+    }
+    .explore1{
+        /* border:2px solid;  */
+        background-color: rgb(27, 169, 220);
+        color:white ;
+        width:100%; 
+        height:5vh; 
+        text-align:center; 
+        padding-top:10%;
+        border-radius: 45px; 
+        margin-left: 2%;
+        
+    }
+    .linesdiv1{
+        /* border:2px solid white; */
+        width:70%; 
+        height:10%; 
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inlinesdiv2{
+        /* border:1px solid white;  */
+        width:100%; 
+        height:10%;
+        display:flex;
+        align-items:center;
+        justify-content: space-evenly;
+    }
+    .inline1{
+        border:1px solid white; 
+        width:20%;
+    }
+    .inlinediv3{
+        /* border:2px solid white; */
+        width:120%;
+        display:flex;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .inline2{
+        color:white;
+    }
+    /*  contries images */
+    /* body main2 */
+    .main2{
+        /* border:2px solid rgb(212, 11, 11);  */
+        width:100%;
+        height:100%;
+        display: flex; 
+        justify-content: center;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+    .visitemain{
+        /* border:2px solid green;  */
+        width:85%;
+        height:15%;
+        margin-top: 10%;
+        display: flex; 
+        flex-direction: column;
+        gap:5%;
+    }
+    .visite1{
+        color:white; 
+        width:80%;
+        font-family: Poppins, sans-serif; 
+    }
+    .visite2{
+        /* border:2px solid white;  */
+        width:40%;
+        height: 80%;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .main3{
+        /* border:2px solid orange; */
+        width:85%; 
+        display:flex; 
+    }
+    .main4{
+        /* border:2px solid white;  */
+        width:75%;
+        display:flex;
+        flex-direction:column;
+    }
+    /* first image */
+    .firstimghead{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        /* justify-content: center; */
+        /* justify-content: flex-start; */
+    }
+    .firstimg1{
+        width:36vh;
+        border-radius:20px;
+    }
+    .firstimg2{
+        /* border: 2px solid blue;  */
+        width:90%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+    }
+    .firstimg3{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .explore{
+        /* border:2px solid rgb(27, 169, 220); */
+        width:28%;
+        height:4vh;
+        color:white; 
+        margin-left:69%;
+        margin-top: 1%;
+        padding-top:1%;
+        border-radius:25px;
+        text-align:center; 
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    .firstimg4{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -10%;
+        margin-left: 2.5%;
+    }
+    .swizerland{
+        width:90% ;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .europe{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .wooxtravel{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    /*horizontal row  */
+    .herow{
+        color:white; 
+        width:100%;
+    }
+    .headcontact{
+        width:95%;
+        height:8vh; 
+        display:flex; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .direction{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* photos section */
+    .main5{
+        display:flex; 
+        flex-direction: column;
+    }
+    .main51{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        justify-content: center;
+    }
+    .firstimg12{
+        width:36vh;
+        border-radius:20px;
+    }
+    .main52{
+        /* border: 2px solid rgb(66, 66, 164);  */
+        width:90%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+    }
+    .main53{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .explore2{
+        /* border:2px solid rgb(27, 169, 220); */
+        width:28%;
+        height:4vh;
+        color:white; 
+        margin-left:69%;
+        margin-top: 1%;
+        padding-top:1%;
+        border-radius:25px;
+        text-align:center; 
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    .main54{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -10%;
+        margin-left: 2.5%;
+    }
+    .caribbean{
+        width:90%;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .northamerika{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .loren{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .direction2{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* photo3 */
+    .main31{
+        /* border:2px solid yellow;  */
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main32{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        justify-content: center;
+    }
+    .img3{
+        width:36vh;
+        border-radius:20px;
+    }
+    .main33{
+        /* border: 2px solid blue;  */
+        width:90%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+    }
+    .main34{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .explore3{
+        /* border:2px solid rgb(27, 169, 220); */
+        width:28%;
+        height:4vh;
+        color:white; 
+        margin-left:69%;
+        margin-top: 1%;
+        padding-top:1%;
+        border-radius:25px;
+        text-align:center; 
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    .main35{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -10%;
+        margin-left: 2.5%;
+    }
+    .france{
+        width:90%;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .europe3{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .wehope{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .direction3{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* buttons */
+    .bottomnummain{
+        /* border:2px solid blue;  */
+        width:100%; 
+        height:8vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap:2%;
+    }
+    .arrow{
+        color:rgb(27, 169, 220); 
+        font-size: larger;
+    }
+    .bottomnum1{
+        /* border:2px solid rgb(27, 169, 220); */
+        background-color:rgb(27, 169, 220);
+        color:white;
+        width:6%;
+        height:4vh;
+         text-align: center;
+        padding-top: 1.5%;
+        padding-bottom: 1%;
+        border-radius: 90px;
+        font-size: larger;
+    }
+    .locationbar{
+        /* border:2px solid red; */
+        width:40%; 
+        height:80vh; 
+        display:flex;
+        justify-content: center;
+    }
+    .locationimg{
+        /* border: 2px solid white;  */
+        width: 80%; 
+        border-radius:20px;
+    }
+    /*bottom bar  */
+    .bottomimg{
+        /* border:2px solid gold;  */
+        width:100%; 
+        height:32vh;
+        background-image: url(../multimedia/images/cta-bg.jpg);
+        display:flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+    .btimg1{
+        /* border:2px solid white; */
+        width:55%; 
+        height:15vh; 
+        display:flex; 
+        flex-direction: column;
+    }
+    .btimg11{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 40px;
+    }
+    .btimg12{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 20px;
+    }
+    .btimg2{
+        /* border:2px solid white;  */
+        width:30%; 
+        height:15vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: flex-end;
+    }
+    .btimg2cd1{
+        border: 2px solid white;
+        width:40%; 
+        height:5vh; 
+        text-align: center; 
+        padding-top: 2.5%; 
+        border-radius:50px; 
+        color:white;
+    }
+    .bottomb{
+        width:100%; 
+        height:60%; 
+        background-color:rgb(27, 169, 220); 
+        display:flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    .bottomend{
+        /* border:2px solid white;  */
+        width:50%; height:15vh ;display:flex; flex-direction: column; align-items: center;justify-content: center;
+    }
+    .bottomend1{
+        font-family: Poppins, sans-serif; color:white;
+    }
+    /* media queryes start */
+     @media screen and (min-width:144px) and (max-width:320px) {
+        *{
+        margin:0;
+        padding: 0;
+        /* overflow-x: hidden; */
+        
+    }
+    body{
+        background-color: black;
+    }
+    .main{
+        /* border:2px solid pink;  */
+        height:200%; 
+        width:100%;
+        display: flex; 
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+    .navhead{
+        /* border:1px solid green;  */
+        width:145%; 
+        height:11vh; 
+        background-color: rgb(51, 197, 250);
+        /* color:white;  */
+        display: flex; 
+        align-items: center;   
+        justify-content: center;
+        position:sticky;
+        top:0%;
+    }
+    .woox{
+        font-family: Lato, sans-serif;
+        /* border:1px solid red;  */
+        width:20%;
+        height:8vh; 
+        text-align: center; 
+        font-size:30px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        /* margin-left: 0px; */
+    }
+    .logo{
+        width:100%;    
+    }
+    .navside{
+        /* border: 2px solid red; */
+        /* width:40em;*/
+         
+        visibility: hidden;
+        /* display:flex;
+        flex-direction: column;
+        margin-left: auto; */
+    }
+    .banner1{
+        background-image:url(../../multimedia/images/banner-02.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* border:2px solid red; */
+        width:145%; 
+        height:100%; 
+        display:flex;
+        /* flex-direction:row;  */
+        justify-content: center; 
+    }
+    .banner2{
+        /* border:2px solid white;  */
+        width:100%; 
+        height:100vh; 
+        display:flex; 
+        flex-direction:column; 
+        align-items: center;
+        /* margin-top: 4%; */
+        /* justify-content: center; */
+    }
+    .glimp{
+        /* border: 2px solid;  */
+        /* font-family: Lato, sans-serif;  */
+        font-family: Poppins, sans-serif;
+        color: white;
+        width:90%; 
+        height:9%; 
+        text-align: center; 
+        /* padding-top:%;  */
+        /* font-size: larger; */
+        /* font-family:Noto Sans Hanunoo ; */
+        font-size: 20px;
+    }
+    .Swizerland{
+        /* border:2px solid white;  */
+        font-family: Poppins, sans-serif;
+        font-weight: 600; 
+        color:white; 
+        width:70%; 
+        text-align: center;
+        font-size:50px ;
+        
+    }
+    .gothere{
+        color: rgb(27, 169, 220); 
+        /* border:1px solid rgb(27, 169, 220); */
+        width:35%; 
+        height:6vh; 
+        border-radius: 25px;
+        text-align: center;
+        padding-top:2%;
+        font-size: 22px;
+    }
+    .headbodybar{
+        /* border:2px solid white;  */
+        width:83%; 
+        height:35vh; 
+        border-radius: 55px; 
+        background-color: white; 
+        display:grid;
+        grid-template-columns: 10px 10px ;
+        justify-content: center;
+        align-items: center;
+        gap:30%;
+        
+        
+    }
+    /* population/territory/avg price/ bar */
+    .bodybar{
+        /* border:2px solid;  */
+        width:110px ;
+        display:flex;
+        gap:4%;
+        align-items:center;
+        margin-left: -50px;
+        /* flex-direction: column; */
+        
+    }
+    .innerbodybar{
+        /* border: 2px solid rgb(27, 169, 220); */
+        width:100%; 
+        height:9vh; 
+        border-radius:50%; 
+        /* text-align: center; */
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        
+    }
+    .bodybarfont{
+        color:rgb(53, 184, 266);
+        font-size:25px;
+        /* margin-top: 22%; */
+    }
+    .population{
+        color:gray;
+    }
+    .territory{
+        color:gray;
+
+    }
+    .avgprice{
+        color:gray;
+    }
+    .bodybarlogs{
+        color:rgb(53, 184, 236)
+    }
+    .bodybar1{
+        /* border: 2px solid; */
+        width: 100px; 
+        display:flex; 
+        align-items:center;
+        display:felx; 
+        align-items: center;
+        gap:4%;
+        margin-left:-50px;
+    }
+    .explore1main{
+        /* border:2px solid; */
+        width:110px;
+        /* display: flex; */
+        margin-left: -50px;
+    }
+    .explore1{
+        /* border:2px solid;  */
+        background-color: rgb(27, 169, 220);
+        color:white ;
+        width:100%; 
+        height:6vh; 
+        text-align:center; 
+        padding-top:10%;
+        border-radius: 45px; 
+        margin-left: 2%;
+        
+    }
+    .linesdiv1{
+        /* border:2px solid white; */
+        width:70%; 
+        height:10%; 
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inlinesdiv2{
+        /* border:1px solid white;  */
+        width:80%; 
+        height:10%;
+        display:flex;
+        align-items:center;
+        justify-content: space-evenly;
+    }
+    .inline1{
+        /* border:1px solid white;  */
+        width:20%;
+    }
+    .inlinediv3{
+        /* border:2px solid white; */
+        width:96%;
+        display:flex;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .inline2{
+        color:white;
+    }
+    /*  contries images */
+    /* body main2 */
+    .main2{
+        /* border:2px solid rgb(212, 11, 11);  */
+        width:145%;
+        height:100%;
+        display: flex; 
+        justify-content: center;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+    .visitemain{
+        /* border:2px solid green;  */
+        width:88%;
+        height:15%;
+        margin-top: 10%;
+        display: flex; 
+        flex-direction: column;
+        gap:5%;
+    }
+    .visite1{
+        /* border:gold; */
+        color:rgb(59, 58, 58); 
+        width:90%;
+        font-family: Poppins, sans-serif; 
+        font-size: 25px;
+    }
+    .visite2{
+        /* border:2px solid white;  */
+        width:95%;
+        height: 80%;
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size: 20px;
+    }
+    .main3{
+        /* border:2px solid orange; */
+        width:88%; 
+        display:flex;
+        flex-direction: column; 
+    }
+    .main4{
+        /* border:2px solid white;  */
+        width:100%;
+        display:flex;
+        flex-direction:column;
+    }
+    /* first image */
+    .firstimghead{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .firstimg1{
+        width:100%;
+        border-radius:20px;
+    }
+    .firstimg2{
+        /* border: 2px solid blue;  */
+        width:99%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+        margin-top:12px;
+    }
+    .firstimg3{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .explore{
+        /* border:2px solid rgb(27, 169, 220); */
+        width:35%;
+        height:6vh;
+        color:white; 
+        margin-left:66%;
+        margin-top: 1%;
+        padding-top:3%;
+        border-radius:25px;
+        text-align:center; 
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    .firstimg4{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -10%;
+        margin-left: -1%;
+    }
+    .swizerland{
+        width:90% ;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+        font-size:25px;
+    }
+    .europe{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size: 19px;
+    }
+    .wooxtravel{
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size: 25px;
+    }
+    /*horizontal row  */
+    .herow{
+        color:white; 
+        width:100%;
+    }
+    .headcontact{
+        width:95%;
+        height:8vh; 
+        display:flex; 
+        /* flex-direction: column; */
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .direction{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+        font-size:20px;
+    }
+    .icon{
+        font-size: 25px;
+    }
+    /* 2nd photo */
+    /* photos section */
+    .main5{
+        display:flex; 
+        flex-direction: column;
+    
+    }
+    .main51{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .firstimg12{
+        width:100%;
+        border-radius:20px;
+    }
+    .main52{
+        /* border: 2px solid rgb(66, 66, 164);  */
+        width:100%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;;
+    }
+    .main53{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main54{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -13%;
+        margin-left: -1%;
+    }
+    .caribbean{
+        width:90%;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+        font-size: 25px;
+    }
+    .northamerika{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size:20px;
+    }
+    .loren{
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size:25px;
+    }
+    .direction2{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+        font-size: 20px;
+    }
+    /* photo3 */
+    .main31{
+        /* border:2px solid yellow;  */
+        display:flex ;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main32{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        justify-content: center;
+        flex-direction:column;
+    }
+    .img3{
+        width:100%;
+        border-radius:20px;
+    }
+    .main33{
+        /* border: 2px solid blue;  */
+        width:100%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+        margin-top:9px;
+    }
+    .main34{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main35{
+        /* border: 2px solid white;  */
+        width:103%; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -13%;
+         margin-left: -2%;
+    }
+    .france{
+        width:90% ;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+        font-size: 25px;
+    }
+    .europe3{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size:20px;
+    }
+    .wehope{
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size:25px;
+    }
+    .direction3{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* buttons */
+    .bottomnummain{
+        /* border:2px solid blue;  */
+        width:100%; 
+        height:8vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap:2%;
+    }
+    .arrow{
+        color:rgb(27, 169, 220); 
+        font-size: larger;
+    }
+    .bottomnum1{
+        /* border:2px solid rgb(27, 169, 220); */
+        background-color:rgb(27, 169, 220) ;
+        color:white;
+        width:11%; 
+        height:4vh;
+        text-align: center;
+        padding-top: 1.5%;
+        padding-bottom: 1%;
+        border-radius: 90px;
+        font-size: larger;
+    }
+    .locationbar{
+        /* border:2px solid red; */
+        width:100%; 
+        height:80vh; 
+        display:flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* padding-left:30% */
+        
+    }
+    .locationimg{
+        /* border: 2px solid white;  */
+        width: 100%; 
+        border-radius:20px;
+    }
+    /*bottom bar  */
+    .bottomimg{
+        border:2px solid gold; 
+        width:144%; 
+        height:70vh ;
+        background-image: url(../multimedia/images/cta-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display:flex; 
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column;
+    }
+    .btimg1{
+        /* border:2px solid white; */
+        width:55%; 
+        height:40vh; 
+        display:flex; 
+        flex-direction: column;
+    }
+    .btimg11{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 40px;
+    }
+    .btimg12{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 22px;
+    }
+    .btimg2{
+        /* border:2px solid white;  */
+        width:40%; 
+        height:15vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: center;
+        /* justify-content: flex-end; */
+    }
+    .btimg2cd1{
+        border: 2px solid white;
+        width:100%; 
+        height:6vh; 
+        text-align: center; 
+        padding-top: 7%; 
+        border-radius:50px; 
+        color:white;
+        font-size:20px
+    }
+    .bottomb{
+        width:145%; 
+        height:60vh; 
+        background-color:rgb(27, 169, 220); 
+        display:flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    .bottomend{
+        /* border:2px solid white;  */
+        width:50%; 
+        height:35vh;
+        display:flex; 
+        /* flex-direction: column;  */
+        align-items: center;
+        /* justify-content: center; */
+    }
+    .bottomend1{
+        font-family: Poppins, sans-serif; 
+        color:white;
+        font-size: 20px;
+    }
+}
+/* media quarryes 375 pxels */
+@media screen and (min-width:321px) and (max-width:376px) {
+   /* *{
+        margin:0;
+        padding:0; 
+        
+    }*/
+    body{
+        background-color: black;
+    }
+    .main{
+        /* border:2px solid orange;  */
+        height:200%; 
+        width:100%;
+        display: flex; 
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+    .navhead{
+       /* border:1px solid red;*/ 
+        width:151%; 
+        height:10vh; 
+        background-color: rgb(51, 197, 250);
+        color:white; 
+        /* display: flex; 
+        align-items: center;   
+        justify-content: center;
+        position:fixed; */
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:2%;
+        position:sticky;
+        top:0;
+
+    }
+    .woox{
+        font-family: Lato, sans-serif;
+        /* border:1px solid;  */
+        width:30%;
+        height:5vh; 
+        text-align: center; 
+        font-size:35px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        margin-left:-5%;
+    }
+    .logo{
+        width:70%;
+    }
+    .navside{
+        /* border:1px solid rgb(224, 6, 6);  */
+        width:70%; 
+        height:5vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: flex-end;
+        gap:5%;
+        font-family:Noto Sans Hanunoo ;
+    }
+    .banner1{
+        background-image: url(../multimedia/images/banner-02.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* border:2px solid red;  */
+        width:151%; 
+        height:100vh; 
+        display:flex;
+        /* flex-direction:row;  */
+        justify-content: center; 
+    }
+    .banner2{
+        /* border:2px solid white;  */
+        width:150%;
+        height:100vh; 
+        display:flex; 
+        flex-direction:column; 
+        align-items: center;
+        /* margin-top: 4%; */
+        justify-content: center;
+    }
+    .glimp{
+        /* border: 2px solid white;  */
+        /* font-family: Lato, sans-serif;  */
+        font-family: Poppins, sans-serif;
+        color: white;
+        width:100%; 
+        height:8%; 
+        text-align: center; 
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        /* padding-top:%;  */
+        /* font-size: larger; */
+        /* font-family:Noto Sans Hanunoo ; */
+        font-size: 20px;
+    }
+    .Swizerland{
+        /* border:2px solid white;  */
+        font-family: Poppins, sans-serif;
+        font-weight: 600; 
+        color:white; 
+        width:52%; 
+        text-align: center;
+        font-size:50px ;
+        
+    }
+    .gothere{
+        color: rgb(27, 169, 220); 
+        /* border:1px solid rgb(27, 169, 220); */
+        width:29%; 
+        height:8vh; 
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* text-align: center; */
+        /* padding-top:1%; */
+        font-size: 20px;
+    }
+    .headbodybar{
+        /* border:2px solid white;  */
+        width:83%; 
+        height:30vh; 
+        border-radius: 55px; 
+        background-color: white; 
+        display:grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: center; 
+        gap:10%;
+    }
+    /* population/territory/avg price/ bar */
+    .bodybar{
+        /* border:2px solid;  */
+        width:130px;
+        display:flex;
+        align-items: center;
+        gap:4%;
+        align-items:center;
+    }
+    .innerbodybar{
+        border: 2px solid rgb(27, 169, 220);
+        width:83%; 
+        height:8vh; 
+        border-radius:50%; 
+        text-align: center;
+    }
+    .bodybarfont{
+        color:rgb(53, 184, 266);
+        font-size:25px;
+        /* margin-top: 22%; */
+    }
+    .population{
+        color:gray;
+    }
+    .territory{
+        color:gray;
+    }
+    .avgprice{
+        color:gray;
+    }
+    .bodybarlogs{
+        color:rgb(53, 184, 236)
+    }
+    .bodybar1{
+        /* border: 2px solid; */
+        width: 130px; 
+        display:flex; 
+        align-items:center;
+        display:felx; 
+        align-items: center;
+        gap:4%;
+    }
+    .explore1main{
+        /* border:2px solid; */
+        width:130px;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+    .explore1{
+        /* border:2px solid;  */
+        background-color: rgb(27, 169, 220);
+        color:white ;
+        width:100%; 
+        height:7vh; 
+        /* text-align:center;  */
+        /* padding-top:10%; */
+        border-radius: 45px; 
+        /* margin-left: 2%; */
+        /* display:felx;
+        justify-content: center;
+        align-items: center; */
+        font-size: 20px;
+        
+    }
+    .linesdiv1{
+        /* border:2px solid white; */
+        width:50%; 
+        height:10%; 
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inlinesdiv2{
+        /* border:1px solid white;  */
+        width:100%; 
+        height:10%;
+        display:flex;
+        align-items:center;
+        justify-content: space-evenly;
+    }
+    .inline1{
+        /* border:1px solid white;  */
+        width:20%;
+    }
+    .inlinediv3{
+        /* border:2px solid white; */
+        width:120%;
+        display:flex;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .inline2{
+        color:white;
+    }
+    /*  contries images */
+    /* body main2 */
+    .main2{
+        /* border:2px solid rgb(212, 11, 11);   */
+        width:150%;
+        height:100%;
+        display: flex; 
+        justify-content: center;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+    .visitemain{
+        /* border:2px solid green;  */
+        width:89%;
+        height:15%;
+        margin-top: 10%;
+        display: flex; 
+        flex-direction: column;
+        gap:5%;
+    }
+    .visite1{
+        /* border: 2px solid white; */
+        color:rgb(58, 58, 58); 
+        width:84%;
+        font-family: Poppins, sans-serif; 
+        font-size:29px;
+    }
+    .visite2{
+        /* border:2px solid white;  */
+        width:80%;
+        height: 80%;
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size: 20px;
+    }
+    .main3{
+        /* border:2px solid orange; */
+        width:89%; 
+        display:flex; 
+        flex-direction: column;
+    }
+    .main4{
+        /* border:2px solid white;  */
+        width:100%;
+        display:flex;
+        flex-direction:column;
+    }
+    /* first image */
+    .firstimghead{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* justify-content: flex-start; */
+    }
+    .firstimg1{
+        width:100%;
+        border-radius:20px;
+    }
+    .firstimg2{
+        /* border: 2px solid blue;  */
+        width:100%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+        margin-top: 4%;
+    }
+    .firstimg3{
+        /* border:2px solid white; */
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .explore{
+        /* border:2px solid rgb(27, 169, 220); */
+        width:28%;
+        height:7vh;
+        color:white; 
+        margin-left:74%;
+        /* margin-top: 1%;*/
+        padding-top:3%;
+        border-radius:25px;
+        /* text-align:center;  */
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+        display:flex;
+        justify-content: center;
+        /* align-items: center; */
+        font-size: 18px;
+    }
+    .firstimg4{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        /* margin-top: -10%; */
+        margin-left: -1%;
+    }
+    .swizerland{
+        width:90% ;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+        font-size:25px
+    }
+    .europe{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size:20px;
+    }
+    .wooxtravel{
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size: 20px;;
+    }
+    /*horizontal row  */
+    .herow{
+        color:white; 
+        width:100%;
+    }
+    .headcontact{
+        width:95%;
+        height:8vh; 
+        display:flex; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact{
+        color:gray;
+        font-family: Poppins, sans-serif;
+        display: flex;
+        flex-direction: column;
+        font-size:23px;
+    }
+    .direction{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+        font-size:20px;
+
+    }
+    /* photos section */
+    .main5{
+        display:flex; 
+        flex-direction: column;
+    }
+    .main51{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .firstimg12{
+        width:100%;
+        border-radius:20px;
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+    .main52{
+        /* border: 2px solid rgb(66, 66, 164);  */
+        width:100%; 
+        height:100%; 
+        display:flex; 
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        margin-top: 2%;
+    }
+    .main53{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main54{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        margin-bottom: 2%;
+        margin-left: -1%;
+    }
+    .caribbean{
+        width:90%;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+        font-size: 25px;
+    }
+    .northamerika{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size:1.2em;
+    }
+    .loren{
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size:1.3em;
+    }
+    .direction2{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+        font-size:1.3em;
+    }
+    /* photo3 */
+    .main31{
+        /* border:2px solid yellow;  */
+        display:flex ;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main32{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .img3{
+        width:100%;
+        border-radius:20px;
+    }
+    .main33{
+        /* border: 2px solid blue;  */
+        width:100%; 
+        height:100%; 
+        margin-top: 2%;
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+    }
+    .main34{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main35{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        /* margin-top: -10%; */
+        margin-left: -1%;
+    }
+    .france{
+        width:90% ;
+        font-size: 2em; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .europe3{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size:1.3em;
+    }
+    .wehope{
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size:1.3em;
+    }
+    .direction3{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+        font-size: 1.3em;
+    }
+    /* buttons */
+    .bottomnummain{
+        /* border:2px solid blue;  */
+        width:100%; 
+        height:8vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap:2%;
+
+    }
+    .arrow{
+        color:rgb(27, 169, 220); 
+        font-size: larger;
+    }
+    .bottomnum1{
+        /* border:2px solid rgb(27, 169, 220); */
+        background-color:rgb(27, 169, 220);
+        color:white;
+        width:12vw; 
+        height:5vh;
+        display:flex;
+        /* align-items: center; */
+        justify-content: center;
+        border-radius: 50px;
+        font-size: 1.5em;
+    }
+    .locationbar{
+        /* border:2px solid red; */
+        width:100%; 
+        height:80%; 
+        display:flex;
+        justify-content: center;
+    }
+    .locationimg{
+        /* border: 2px solid white;  */
+        width: 100%; 
+        border-radius:20px;
+    }
+    /*bottom bar  */
+    .bottomimg{
+        /* border:2px solid gold;  */
+        width:151%; 
+        height:90vh;
+        background-image: url(../multimedia/images/cta-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display:flex; 
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column;
+    }
+    .btimg1{
+        /* border:2px solid white; */
+        width:55%; 
+        height:50vh; 
+        /* margin-left: 18%; */
+        display:flex; 
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btimg11{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 40px;
+    }
+    .btimg12{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 20px;
+    }
+    .btimg2{
+        /* border:2px solid white;  */
+        width:50%; 
+        height:15vh; 
+        /* margin-left: 18%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btimg2cd1{
+        border: 2px solid white;
+        width:80%; 
+        height:10vh;
+        border-radius:50px;
+        color:white;
+        font-size: 15px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20%;
+    }
+    .bottomb{
+        width:151%; 
+        height:60vh; 
+        background-color:rgb(27, 169, 220); 
+        display:flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    .bottomend{
+        /* border:2px solid white;  */
+        width:55%;
+        height:40vh;
+        display:flex; 
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+
+    }
+    .bottomend1{
+        font-family: Poppins, sans-serif; 
+        color:white;
+        font-size: 15px;
+    } 
+}
+        /* media qurries */
+@media screen and (min-width: 375px) and (max-width: 426px) {
+    *{
+        margin:0;
+        padding:0;
+        /* overflow-x: hidden; */
+        
+    }
+    body{
+        background-color: black;
+    }
+    .main{
+        /* border:2px solid;  */
+        height:200%; 
+        width:100%;
+        display: flex; 
+        flex-direction: column;
+    }
+    .navhead{
+        /* border:1px solid red;  */
+        width:106%; 
+        height:10vh; 
+        background-color: rgb(51, 197, 250);
+        color:white; 
+        display: flex; 
+        align-items: center;   
+        justify-content: center;
+        position:sticky;
+        top:0%;
+    }
+    .woox{
+        font-family: Lato, sans-serif;
+        /* border:1px solid yellow;  */
+        width:15%;
+        height:5vh; 
+        text-align: center; 
+        font-size:35px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        margin-left: 2%;
+    }
+    .logo{
+        width:95%;
+    }
+    .navside{
+        /* border:1px solid white;  */
+        width:77%; 
+        height:5vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: flex-end;
+        gap:5%;
+        font-family:Noto Sans Hanunoo ;
+        font-size: 12px;
+        /* margin-left: ; */
+    }
+    .banner1{
+        background-image: url(../multimedia/images/banner-02.jpg);
+       background-position: center;
+       background-repeat: no-repeat;
+        /* border:2px solid red;  */
+        width:106%; 
+        height:100vh; 
+        display:flex;
+        /* flex-direction:row;  */
+        justify-content: center; 
+    }
+    .banner2{
+        /* border:2px solid white;   */
+        width:100%; 
+        height:100vh; 
+        display:flex; 
+        flex-direction:column; 
+        align-items: center;
+        /* margin-top: 4%; */
+        justify-content: center;
+    }
+    .glimp{
+        /* border: 2px solid white;  */
+        /* font-family: Lato, sans-serif;  */
+        font-family: Poppins, sans-serif;
+        color: white;
+        width:95%; 
+        height:8%; 
+        text-align: center; 
+        /* padding-top:%;  */
+        /* font-size: larger; */
+        /* font-family:Noto Sans Hanunoo ; */
+        font-size: 17px;
+    }
+    .Swizerland{
+        /* border:2px solid white;  */
+        font-family: Poppins, sans-serif;
+        font-weight: 600; 
+        color:white; 
+        width:100%; 
+        text-align: center;
+        font-size:40px ;
+        
+    }
+    .gothere{
+        color: rgb(27, 169, 220); 
+        border:1px solid rgb(27, 169, 220);
+        width:30%; 
+        height:6vh; 
+        border-radius: 25px;
+        /* text-align: center;*/
+        padding-bottom:1%;
+        font-size: 14px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .headbodybar{
+        /* border:2px solid ; */
+        width:93%; 
+        height: 30vh; 
+        border-radius: 55px; 
+        background-color: white; 
+        display:grid;
+        grid-template-columns: 30% 30%;
+        grid-template-rows: auto;
+        /* align-items: center; */
+        /* justify-content: center;  */
+        gap:10%;
+    }
+    /* population/territory/avg price/ bar */
+    .bodybar{
+        /* border:2px solid;  */
+        width:125%;
+        display:flex;
+        gap:4%;
+        align-items:center;
+    }
+    .bodybar1{
+        /* border: 2px solid; */
+        width: 120%; 
+        display:flex; 
+        align-items:center;
+        display:felx; 
+        align-items: center;
+        gap:1%;
+    }
+    .innerbodybar{
+        border: 2px solid rgb(27, 169, 220);
+        width:60%; 
+        height:9vh;
+        border-radius:50%; 
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        /* text-align: center; */
+        
+    }
+    .bodybarfont{
+        color:rgb(53, 184, 266);
+        font-size:25px;
+        /* margin-top: 22%; */
+    }
+    .population{
+        color:gray;
+    }
+    .territory{
+        color:gray;
+    }
+    .avgprice{
+        color:gray;
+    }
+    .bodybarlogs{
+        color:rgb(53, 184, 236)
+    }
+    .explore1main{
+        /* border:2px solid; */
+        width:10%;
+        /* display: flex; */
+    }
+    .explore1{
+        /* border:2px solid;  */
+        background-color: rgb(27, 169, 220);
+        color:white ;
+        width:30vw; 
+        height:6vh; 
+        text-align:center;
+        border-radius: 45px; 
+        /* margin-left: 2%; */
+        font-size: 15px;
+        padding-top:1em;  
+    }
+    .linesdiv1{
+        /* border:2px solid white; */
+        width:60%; 
+        height:10%; 
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inlinesdiv2{
+        /* border:1px solid white;  */
+        width:100%; 
+        height:10%;
+        display:flex;
+        align-items:center;
+        justify-content: space-evenly;
+    }
+    .inline1{
+        border:1px solid white; 
+        width:20%;
+    }
+    .inlinediv3{
+        /* border:2px solid white; */
+        width:116%;
+        display:flex;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .inline2{
+        color:white;
+    }
+    /*  contries images */
+    /* body main2 */
+    .main2{
+        /* border:2px solid rgb(212, 11, 11);  */
+        width:105%;
+        height:100%;
+        display: flex; 
+        justify-content: center;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+    .visitemain{
+        /* border:2px solid green;  */
+        width:85%;
+        height:15%;
+        margin-top: 10%;
+        display: flex; 
+        flex-direction: column;
+        gap:5%;
+    }
+    .visite1{
+        color:white; 
+        width:80%;
+        font-family: Poppins, sans-serif; 
+    }
+    .visite2{
+        /* border:2px solid white;  */
+        width:80%;
+        height: 80%;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .main3{
+        /* border:2px solid orange; */
+        width:85%; 
+        display:flex; 
+        flex-direction: column;
+    }
+    .main4{
+        /* border:2px solid white;  */
+        width:100%;
+        display:flex;
+        flex-direction:column;
+    }
+    /* first image */
+    .firstimghead{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* justify-content: flex-start; */
+    }
+    .firstimg1{
+        width:100%;
+        border-radius:20px;
+    }
+    .firstimg2{
+        /* border: 2px solid blue; */
+        width:100%;
+        height:60vh; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+    }
+    .firstimg3{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .explore{
+        /* border:2px solid rgb(27, 169, 220); */
+        width:35%;
+        height:4vh;
+        color:white; 
+        margin-left:66%;
+        margin-top: 1%;
+        padding-top:1%;
+        border-radius:25px;
+        text-align:center; 
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+        font-size: 14px;
+    }
+    .firstimg4{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -10%;
+        margin-left: -1%;
+    }
+    .swizerland{
+        width:90% ;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .europe{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .wooxtravel{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    /*horizontal row  */
+    .herow{
+        color:white; 
+        width:133%;
+    }
+    .headcontact{
+        width:95%;
+        height:8vh; 
+        display:flex; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact{
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size: 15px;
+    }
+    .icon{
+        font-size: 22px;;
+    }
+    .direction{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* photos section */
+    .main5{
+        display:flex; 
+        flex-direction: column;
+    }
+    .main51{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .firstimg12{
+        width:100%;
+        border-radius:20px;
+    }
+    .main52{
+        /* border: 2px solid rgb(66, 66, 164);   */
+        width:100%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    .main53{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main54{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -10%;
+        margin-left: -1%;
+    }
+    .caribbean{
+        width:90%;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .northamerika{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .loren{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .direction2{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* photo3 */
+    .main31{
+        /* border:2px solid yellow;  */
+        width: 100%;
+        display:flex ;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main32{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        justify-content: center;
+        flex-direction:column;
+    }
+    .img3{
+        width:100%;
+        border-radius:20px;
+    }
+    .main33{
+        /* border: 2px solid blue;  */
+        width:100%; 
+        height:100%; 
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    .main34{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main35{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -10%;
+        margin-left: -1%;
+
+    }
+    .france{
+        width:90%;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+        /* font-size: 20px; */
+    }
+    .europe3{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .wehope{
+        color:gray;
+        font-family: Poppins, sans-serif;
+        /* font-size: 20px; */
+    }
+    .direction3{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+        /* font-size: 20px; */
+    }
+    /* buttons */
+    .bottomnummain{
+        /* border:2px solid blue;  */
+        width:100%; 
+        height:8vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap:2%;
+    }
+    .arrow{
+        color:rgb(27, 169, 220); 
+        font-size: larger;
+    }
+    .bottomnum1{
+        /* border:2px solid rgb(27, 169, 220); */
+        background-color:rgb(27, 169, 220) ;
+        color:white;
+        width:9vw; 
+        height:4vh;
+        text-align: center;
+        padding-top: 1.5%;
+        padding-bottom: 1%;
+        border-radius: 90px;
+        font-size: larger;
+    }
+    .locationbar{
+        /* border:2px solid red; */
+        width:100%; 
+        height:80vh; 
+        display:flex;
+        justify-content: center;
+    }
+    .locationimg{
+        /* border: 2px solid white;  */
+        width: 100%; 
+        border-radius:20px;
+    }
+    /*bottom bar  */
+    .bottomimg{
+        /* border:2px solid gold;  */
+        width:106%; 
+        height:60vh;
+        background-image: url(../multimedia/images/cta-bg.jpg);
+        /* background-size: cover;
+        background-repeat: no-repeat; */
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display:flex; 
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .btimg1{
+        /* border:2px solid white; */
+        width:60%; 
+        height:35vh; 
+        display:flex; 
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .btimg11{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 30px;
+        margin-left: 15%;
+    }
+    .btimg12{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 18px;
+        margin-left: 15%;
+    }
+    .btimg2{
+        /* border:2px solid white;  */
+        width:60%; 
+        height:15vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: flex-end;
+    }
+    .btimg2cd1{
+        border: 2px solid white;
+        width:60%; 
+        height:5vh; 
+        text-align: center;
+        padding-top: 2.5%; 
+        border-radius:50px; 
+        color:white;
+        margin-right:3.5em;
+    }
+    .bottomb{
+        width:106%; 
+        height:40vh; 
+        background-color:rgb(27, 169, 220); 
+        display:flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    .bottomend{
+        /* border:2px solid white;  */
+        width:60%; 
+        height:30vh;
+        display:flex; 
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+    .bottomend1{
+        font-family: Poppins, sans-serif; 
+        color:white;
+        margin-left: 15%;
+    }
+}
+ @media screen and (min-width:426px) and (max-width:768px) {
+    *{
+        margin:0;
+        padding:0;
+        /* overflow-x: hidden; */
+        
+    }
+    body{
+        background-color: black;
+    }
+    .main{
+        /* border:2px solid red;  */
+        height:150%; 
+        width:100%;
+        display: flex; 
+        flex-direction: column;
+    }
+    .navhead{
+        /* border:1px solid red;  */
+        width:130%;
+        height:10vh;
+        background-color: rgb(51, 197, 250);
+        color:white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .woox{
+        font-family: Lato, sans-serif;
+        /* border:1px solid;  */
+        width:15%;
+        height:5vh; 
+        text-align: center; 
+        font-size:35px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+    }
+    .logo{
+        width:70%;
+    }
+    .navside{
+        /* border:1px solid white;  */
+        width:70%; 
+        height:5vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: flex-end;
+        gap:5%;
+        font-family:Noto Sans Hanunoo ;
+    }
+    .banner1{
+        background-image: url(../multimedia/images/banner-02.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        /* border:2px solid red;  */
+        width:130%; 
+        height:100vh; 
+        display:flex;
+        /* flex-direction:row;  */
+        justify-content: center; 
+    }
+    .banner2{
+        /* border:2px solid white;  */
+        width:100%; 
+        height:100vh; 
+        display:flex; 
+        flex-direction:column; 
+        align-items: center;
+        /* margin-top: 4%; */
+        justify-content: center;
+    }
+    .glimp{
+        /* border: 2px solid white;  */
+        /* font-family: Lato, sans-serif;  */
+        font-family: Poppins, sans-serif;
+        color: white;
+        width:100%; 
+        height:8%; 
+        text-align: center; 
+        /* padding-top:%;  */
+        /* font-size: larger; */
+        /* font-family:Noto Sans Hanunoo ; */
+        font-size: 20px;
+    }
+    .Swizerland{
+        /* border:2px solid white;  */
+        font-family: Poppins, sans-serif;
+        font-weight: 600; 
+        color:white; 
+        width:40%; 
+        text-align: center;
+        font-size:50px ;
+        
+    }
+    .gothere{
+        color: rgb(27, 169, 220); 
+        border:1px solid rgb(27, 169, 220);
+        width:12%; 
+        height:5vh; 
+        border-radius: 25px;
+        text-align: center;
+        padding-top:1%;
+    }
+    .headbodybar{
+        /* border:2px solid black;  */
+        width:90%; 
+        height:15vh; 
+        border-radius: 55px; 
+        background-color: white; 
+        display:flex;
+        align-items: center;
+        justify-content: center; 
+        gap:5%;
+    }
+    /* population/territory/avg price/ bar */
+    .bodybar{
+        /* border:2px solid;  */
+        width:20%;
+        display:flex;
+        gap:4%;
+        align-items:center;
+    }
+    .bodybar1{
+        /* border: 2px solid; */
+        width: 21%; 
+        display:flex; 
+        align-items:center;
+        display:felx; 
+        align-items: center;
+        gap:4%;
+    }
+    .innerbodybar{
+        border: 2px solid rgb(27, 169, 220);
+        width:40%; 
+        height:9vh;
+        border-radius:50%; 
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        /* text-align: center; */
+    }
+    .bodybarfont{
+        color:rgb(53, 184, 266);
+        font-size:25px;
+        /* margin-top: 22%; */
+    }
+    .population{
+        color:gray;
+    }
+    .territory{
+        color:gray;
+    }
+    .avgprice{
+        color:gray;
+    }
+    .bodybarlogs{
+        color:rgb(53, 184, 236)
+    }
+    
+    .explore1main{
+        /* border:2px solid; */
+        width:10%;
+        /* display: flex; */
+    }
+    .explore1{
+        /* border:2px solid;  */
+        background-color: rgb(27, 169, 220);
+        color:white ;
+        width:7em; 
+        height:5vh; 
+        text-align:center; 
+        padding-top:10%;
+        border-radius: 45px; 
+        margin-left: -20%;
+        
+    }
+    .linesdiv1{
+        /* border:2px solid white; */
+        width:70%; 
+        height:10%; 
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inlinesdiv2{
+        /* border:1px solid white;  */
+        width:100%; 
+        height:10%;
+        display:flex;
+        align-items:center;
+        justify-content: space-evenly;
+    }
+    .inline1{
+        border:1px solid white; 
+        width:20%;
+    }
+    .inlinediv3{
+        /* border:2px solid white; */
+        width:120%;
+        display:flex;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .inline2{
+        color:white;
+    }
+    /*  contries images */
+    /* body main2 */
+    .main2{
+        /* border:2px solid rgb(212, 11, 11);  */
+        width:130%;
+        height:100%;
+        display: flex; 
+        justify-content: center;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+    .visitemain{
+        /* border:2px solid green;  */
+        width:90%;
+        height:15%;
+        margin-top: 10%;
+        display: flex; 
+        flex-direction: column;
+        gap:5%;
+    }
+    .visite1{
+        /* border:2px solid white; */
+        color:rgb(57, 57, 57); 
+        width:80%;
+        font-family: Poppins, sans-serif; 
+        font-size:30px;
+    }
+    .visite2{
+        /* border:2px solid white;  */
+        width:100%;
+        height: 80%;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .main3{
+        /* border:2px solid orange; */
+        width:90%; 
+        display:flex; 
+        flex-direction: column;
+    }
+    .main4{
+        /* border:2px solid white;  */
+        width:75%;
+        display:flex;
+        flex-direction:column;
+    }
+    /* first image */
+    .firstimghead{
+        /* border:2px solid red;  */
+        width:132%; 
+        display: flex;
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        /* justify-content: flex-start; */
+    }
+    .firstimg1{
+        width:40vw;
+        /* height:55vh; */
+        border-radius:20px;
+        display: flex;
+    }
+    .firstimg2{
+        /* border: 2px solid blue;  */
+        width:200%;
+        /* height:100%;  */
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+    }
+    .firstimg3{
+        /* border: 1px solid red; */
+         width:80%; 
+        height:100%;
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+     
+    }
+    .explore{
+        border:2px solid rgb(27, 169, 220);
+        /* max-width: 20vw; */
+        width:18vw;
+        height:5vh;
+        color:white; 
+        margin-left:82%;
+        margin-top: 1%;
+        padding-top:-3%;
+        border-radius:25px;
+        /* text-align:center;  */
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+        font-size:15px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .firstimg4{
+        /* border: 2px solid white;  */
+        width:110%;
+        /* height:55vh;  */
+        display:flex;
+        flex-direction:column;
+        margin-top: -10%;
+        margin-left: -8%;
+    }
+    .swizerland{
+        width:90% ;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .europe{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .wooxtravel{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    /*horizontal row  */
+    .hrrow{
+        color:white; 
+        width:133%;
+    }
+    .headcontact{
+        width:100%;
+        height:8vh; 
+        display:flex; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact{
+        color:gray;
+        font-family: Poppins, sans-serif;
+        font-size: 17px;
+    }
+    .direction{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* photos section */
+    .main5{
+        display:flex; 
+        flex-direction: column;
+    }
+    .main51{
+        /* border:2px solid red;  */
+        width:132%; 
+        display: flex;
+        justify-content: center;
+    }
+    .firstimg12{
+        width:40vw;
+        border-radius:20px;
+    }
+    .main52{
+        /* border: 2px solid rgb(66, 66, 164);  */
+        width:90%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+    }
+    .main53{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .explore2{
+        /* border:2px solid rgb(27, 169, 220); */
+        width:18vw;
+        height:5vh;
+        color:white; 
+        margin-left:77%;
+        margin-top: 1%;
+        padding-top:-3%;
+        border-radius:25px;
+        /* text-align:center;  */
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+        font-size:14px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main54{
+        /* border: 2px solid white;  */
+        width:100%; 
+        height:50vh;
+        display:flex;
+        flex-direction:column;
+        margin-top: -8%;
+        margin-left: 1%;
+    }
+    .caribbean{
+        width:90%;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .northamerika{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .loren{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .direction2{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* photo3 */
+    .main31{
+        /* border:2px solid yellow;  */
+        display:flex ;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main32{
+        /* border:2px solid red;  */
+        width:132%; 
+        display: flex;
+        justify-content: center;
+    }
+    .img3{
+        width:40vw;
+        border-radius:20px;
+    }
+    .main33{
+        /* border: 2px solid blue;  */
+        width:90%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+    }
+    .main34{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .explore3{
+        /* border:2px solid burlywood; */
+        max-width: 40%;
+        width:18vw;
+        height:5vh;
+        color:white; 
+        margin-left:78%;
+        margin-top: 1%;
+        padding-top:-3%;
+        border-radius:25px;
+        /* text-align:center;  */
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+        font-size:14px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main35{
+        /* border: 2px solid white;  */
+        width:100%;
+        height:50vh; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -8%;
+        margin-left: 1%;
+    }
+    .france{
+        width:90%;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .europe3{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .wehope{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .direction3{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* buttons */
+    .bottomnummain{
+        /* border:2px solid blue;  */
+        width:132%; 
+        height:8vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap:2%;
+    }
+    .arrow{
+        color:rgb(27, 169, 220); 
+        font-size: larger;
+    }
+    .bottomnum1{
+        /* border:2px solid rgb(27, 169, 220); */
+        background-color:rgb(27, 169, 220);
+        color:white;
+        width:6vw; 
+        height:4vh;
+        text-align: center;
+        padding-top: 1.5%;
+        padding-bottom: 1%;
+        border-radius: 90px;
+        font-size: larger;
+    }
+    .locationbar{
+        /* border:2px solid red; */
+        width:100%; 
+        height:85%; 
+        display:flex;
+        justify-content: center;
+    }
+    .locationimg{
+        /* border: 2px solid white;  */
+        width: 100%;
+        height: 85vh; 
+        border-radius:20px;
+       
+    }
+    /*bottom bar  */
+    .bottomimg{
+        /* border:2px solid gold;  */
+        width:130%; 
+        height:65vh;
+        background-image: url(../multimedia/images/cta-bg.jpg);display:flex; 
+        background-position:center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+     
+    }
+    .btimg1{
+        /* border:2px solid white; */
+        width:100%; 
+        height:30vh; 
+        display:flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btimg11{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 40px;
+    }
+    .btimg12{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 20px;
+    }
+    .btimg2{
+        /* border:2px solid white;  */
+        width:50%; 
+        height:15vh; 
+        display:flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    .btimg2cd1{
+        border: 2px solid white;
+        width:40%; 
+        height:5vh; 
+        text-align: center; 
+        padding-top: 2.5%; 
+        border-radius:50px; 
+        color:white;
+    }
+    .bottomb{
+        width:130%; 
+        height:20vh; 
+        background-color:rgb(27, 169, 220); 
+        display:flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    .bottomend{
+        /* border:2px solid white;  */
+        width:60%; 
+        height:15vh;
+        display:flex; 
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+    .bottomend1{
+        font-family: Poppins, sans-serif; 
+        color:white;
+    }
+ }
+ @media  screen and (min-width:769px) and (max-width:1024px) {
+    *{
+        margin:0;
+        padding:0;
+        /* overflow-x: hidden; */
+        
+    }
+    body{
+        background-color: black;
+    }
+    .main{
+        /* border:2px solid;  */
+        height:200%; 
+        width:100%;
+        display: flex; 
+        flex-direction: column;
+    }
+    .navhead{
+        /* border:1px solid red;  */
+        width:100%; 
+        height:10vh; 
+        background-color: rgb(51, 197, 250);
+        color:white; 
+        display: flex; 
+        align-items: center;   
+        justify-content: center;
+    }
+    .woox{
+        font-family: Lato, sans-serif;
+        /* border:1px solid;  */
+        width:15%;
+        height:5vh; 
+        text-align: center; 
+        font-size:35px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+    }
+    .logo{
+        width:70%;
+    }
+    .navside{
+        /* border:1px solid;  */
+        width:70%; 
+        height:5vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: flex-end;
+        gap:5%;
+        font-family:Noto Sans Hanunoo ;
+    }
+    .banner1{
+        background-image: url(../multimedia/images/banner-02.jpg);
+        /* border:2px solid red;  */
+        width:100%; 
+        height:100vh; 
+        display:flex;
+        /* flex-direction:row;  */
+        justify-content: center; 
+    }
+    .banner2{
+        /* border:2px solid white;  */
+        width:100%; 
+        height:100vh; 
+        display:flex; 
+        flex-direction:column; 
+        align-items: center;
+        /* margin-top: 4%; */
+        justify-content: center;
+    }
+    .glimp{
+        /* border: 2px solid white;  */
+        /* font-family: Lato, sans-serif;  */
+        font-family: Poppins, sans-serif;
+        color: white;
+        width:100%; 
+        height:8%; 
+        text-align: center; 
+        /* padding-top:%;  */
+        /* font-size: larger; */
+        /* font-family:Noto Sans Hanunoo ; */
+        font-size: 20px;
+    }
+    .Swizerland{
+        /* border:2px solid white;  */
+        font-family: Poppins, sans-serif;
+        font-weight: 600; 
+        color:white; 
+        width:40%; 
+        text-align: center;
+        font-size:50px ;
+        
+    }
+    .gothere{
+        color: rgb(27, 169, 220); 
+        border:1px solid rgb(27, 169, 220);
+        width:12%; 
+        height:5vh; 
+        border-radius: 25px;
+        text-align: center;
+        padding-top:1%;
+    }
+    .headbodybar{
+        border:2px solid black; 
+        width:83%; 
+        height:20vh; 
+        border-radius:40px; 
+        background-color: white; 
+        display:flex;
+        align-items: center;
+        justify-content: center; 
+        gap:10%;
+    }
+    /* population/territory/avg price/ bar */
+    .bodybar{
+        /* border:2px solid;  */
+        width:17% ;
+        display:flex;
+        gap:4%;
+        align-items:center;
+    }
+    .bodybar1{
+        /* border: 2px solid; */
+        width: 17%; 
+        display:flex; 
+        align-items:center;
+        display:felx; 
+        align-items: center;
+        gap:4%;
+    }
+    .innerbodybar{
+        border: 2px solid rgb(27, 169, 220);
+        width:40%; 
+        height:9vh;
+        border-radius:50%; 
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        /* text-align: center; */
+    }
+    .bodybarfont{
+        color:rgb(53, 184, 266);
+        font-size:25px;
+        /* margin-top: 22%; */
+    }
+    .population{
+        color:gray;
+    }
+    .territory{
+        color:gray;
+    }
+    .avgprice{
+        color:gray;
+    }
+    .bodybarlogs{
+        color:rgb(53, 184, 236)
+    }
+    .explore1main{
+        /* border:2px solid; */
+        width:10%;
+        /* display: flex; */
+    }
+    .explore1{
+        border:2px solid; 
+        background-color: rgb(27, 169, 220);
+        color:white ;
+        width:120%; 
+        height:5vh; 
+        text-align:center; 
+        padding-top:10%;
+        border-radius: 45px; 
+        margin-left: -15%;
+        
+    }
+    .linesdiv1{
+        /* border:2px solid white; */
+        width:70%; 
+        height:10%; 
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inlinesdiv2{
+        /* border:1px solid white;  */
+        width:100%; 
+        height:10%;
+        display:flex;
+        align-items:center;
+        justify-content: space-evenly;
+    }
+    .inline1{
+        border:1px solid white; 
+        width:20%;
+    }
+    .inlinediv3{
+        /* border:2px solid white; */
+        width:120%;
+        display:flex;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .inline2{
+        color:white;
+    }
+    /*  contries images */
+    /* body main2 */
+    .main2{
+        /* border:2px solid rgb(212, 11, 11);  */
+        width:100%;
+        height:100%;
+        display: flex; 
+        justify-content: center;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+    .visitemain{
+        /* border:2px solid green;  */
+        width:85%;
+        height:15%;
+        margin-top: 10%;
+        display: flex; 
+        flex-direction: column;
+        gap:5%;
+    }
+    .visite1{
+        color:rgb(51, 50, 50); 
+        width:80%;
+        font-family: Poppins, sans-serif; 
+    }
+    .visite2{
+        /* border:2px solid white;  */
+        width:40%;
+        height: 80%;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .main3{
+        /* border:2px solid orange; */
+        width:95%; 
+        display:flex; 
+    }
+    .main4{
+        /* border:2px solid white; */
+        width:80%;
+        display:flex;
+        flex-direction:column;
+    }
+    /* first image */
+    .firstimghead{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        /* margin-top: 1%; */
+        /* justify-content: center; */
+        /* justify-content: flex-start; */
+    }
+    .firstimg1{
+        width:36vh;
+        height:40vh;
+        border-radius:20px;
+    }
+    .firstimg2{
+        /* border: 2px solid blue;  */
+        width:90%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+    }
+    .firstimg3{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .explore{
+        /* border:2px solid rgb(27, 169, 220); */
+        width:28%;
+        height:4vh;
+        color:white; 
+        margin-left:69%;
+        margin-top: 1%;
+        padding-top:1%;
+        border-radius:25px;
+        text-align:center; 
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    .firstimg4{
+        /* border: 2px solid white;  */
+        width:100%; 
+        /* height:40vh; */
+        display:flex;
+        flex-direction:column;
+        margin-top: -9%;
+        margin-left: 2.5%;
+    }
+    .swizerland{
+        width:90% ;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .europe{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .wooxtravel{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    /*horizontal row  */
+    .herow{
+        color:white; 
+        width:100%;
+    }
+    .headcontact{
+        width:95%;
+        height:8vh; 
+        display:flex; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .direction{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* photos section */
+    .main5{
+        display:flex; 
+        flex-direction: column;
+    }
+    .main51{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        justify-content: center;
+    }
+    .firstimg12{
+        width:36vh;
+        height:40vh;
+        border-radius:20px;
+    }
+    .main52{
+        /* border: 2px solid rgb(66, 66, 164);  */
+        width:90%; 
+        height:100%; 
+        display:flex; 
+        align-items: center;
+        justify-content: center;
+    }
+    .main53{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .explore2{
+        /* border:2px solid rgb(27, 169, 220); */
+        width:28%;
+        height:4vh;
+        color:white; 
+        margin-left:69%;
+        margin-top: 1%;
+        padding-top:1%;
+        border-radius:25px;
+        text-align:center; 
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    .main54{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -8%;
+        margin-left: 2.5%;
+    }
+    .caribbean{
+        width:90%;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .northamerika{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .loren{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .direction2{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* photo3 */
+    .main31{
+        /* border:2px solid yellow;  */
+        display:flex ;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main32{
+        /* border:2px solid red;  */
+        width:100%; 
+        display: flex;
+        justify-content: center;
+    }
+    .img3{
+        width:36vh;
+        height:40vh;
+        border-radius:20px;
+    }
+    .main33{
+        /* border: 2px solid blue;  */
+        width:90%; 
+        height:100%; 
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main34{
+        width:95%; 
+        display:flex;
+        justify-content:center; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .explore3{
+        /* border:2px solid rgb(27, 169, 220); */
+        width:28%;
+        height:4vh;
+        color:white; 
+        margin-left:69%;
+        margin-top: 1%;
+        padding-top:1%;
+        border-radius:25px;
+        text-align:center; 
+        background-color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    .main35{
+        /* border: 2px solid white;  */
+        width:100%; 
+        display:flex;
+        flex-direction:column;
+        margin-top: -10%;
+        margin-left: 2.5%;
+    }
+    .france{
+        width:90% ;
+        font-size: larger; 
+        color:rgb(47, 44, 44);
+        font-family: Poppins, sans-serif;
+    }
+    .europe3{
+        color:white;
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .wehope{
+        color:gray;
+        font-family: Poppins, sans-serif;
+    }
+    .direction3{
+        color:rgb(27, 169, 220);
+        font-family: Poppins, sans-serif;
+    }
+    /* buttons */
+    .bottomnummain{
+        /* border:2px solid blue;  */
+        width:100%; 
+        height:8vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap:2%;
+    }
+    .arrow{
+        color:rgb(27, 169, 220); 
+        font-size: larger;
+    }
+    .bottomnum1{
+        /* border:2px solid rgb(27, 169, 220); */
+        background-color:rgb(27, 169, 220);
+        color:white;
+        width:4vw; 
+        height:4vh;
+        text-align: center;
+        padding-top: 1.5%;
+        padding-bottom: 1%;
+        border-radius: 90px;
+        font-size: larger;
+    }
+    .locationbar{
+        /* border:2px solid red; */
+        width:30%; 
+        height:80vh; 
+        display:flex;
+        justify-content: center;
+    }
+    .locationimg{
+        /* border: 2px solid white;  */
+        width: 80%; 
+        border-radius:20px;
+    }
+    /*bottom bar  */
+    .bottomimg{
+        /* border:2px solid gold;  */
+        width:100%; 
+        height:36vh;
+        background-image: url(../multimedia/images/cta-bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        display:flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+    .btimg1{
+        /* border:2px solid white; */
+        width:55%; 
+        height:15vh; 
+        display:flex; 
+        flex-direction: column;
+       
+    }
+    .btimg11{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 35px;
+    }
+    .btimg12{
+        font-family: Poppins, sans-serif; 
+        color:white; 
+        font-size: 20px;
+    }
+    .btimg2{
+        /* border:2px solid white;  */
+        width:40%; 
+        height:15vh; 
+        display:flex; 
+        align-items: center; 
+        justify-content: flex-end;
+    }
+    .btimg2cd1{
+        border: 2px solid white;
+        width:40%; 
+        height:5vh; 
+        text-align: center; 
+        padding-top: 2.5%; 
+        border-radius:50px; 
+        color:white;
+    }
+    .bottomb{
+        width:100%; 
+        height:20vh; 
+        background-color:rgb(27, 169, 220); 
+        display:flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    .bottomend{
+        /* border:2px solid white;  */
+        width:50%; 
+        height:15vh;
+        display:flex; 
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+    .bottomend1{
+        font-family: Poppins, sans-serif; 
+        color:white;
+    }  
+ }
+</style>
+</head>
+<body >
+    <div class="main">
+        <nav class="navhead">
+             <p class="woox"><img class="logo" src="../multimedia/images/logo.png" alt=""></p>
+             <div class="navside">
+                <p>Home</p>
+                <p>About</p>
+                <p>Deals</p>
+                <p>Reservation</p>
+                <p>Book Yours</p>
+             </div>
+        </nav>
+        <div class="banner1">
+           <!-- <div class="" > -->
+             <!-- <img src="../multimedia/images/banner-02.jpg" alt="">  -->
+             <div class="banner2">
+                <br><br><br><br>
+                <h4 class="glimp"><b>Take a Glimpse Into The Beautiful Country Of:</b></h4>
+                 
+                <h1 class="Swizerland"><b>Swizerland</b></h1>
+                <br><br>
+                <p class="gothere">Go There</p>
+                <br><br>
+                <!-- body bar -->
+                <div class="headbodybar">
+                   <div class="bodybar">
+                       <p class="innerbodybar"><i class="fa-solid fa-user bodybarfont"></i></p>
+                       <span>
+                        <p class="population">population:</p>
+                        <b class="bodybarlogs">8.66M</b>
+                       </span>
+                   </div>
+                   <div class="bodybar1">
+                       <p class="innerbodybar"><i class="fa-solid fa-globe  bodybarfont"></i></p>
+                       <span>
+                        <p class="territory">territory:</p>
+                        <b class="bodybarlogs">42.290KM2</b>
+                       </span>
+                   </div>
+                   <div class="bodybar1">
+                      <p class="innerbodybar"><i class="fa-solid fa-house bodybarfont"></i></p>
+                      <span>
+                         <p class="avgprice">AVG Price</p>
+                         <b class="bodybarlogs" >$1.100.200</b>
+                      </span>
+                   </div>
+                   <div class="explore1main">
+                    <p class="explore1" >Explore More</p>
+                   </div>
+                </div>
+                <br>
+                <div class="linesdiv1">
+                  <div class="inlinesdiv2"> 
+                    <div class="inline1" ></div>
+                    <div class="inline1" ></div>
+                    <div class="inline1" ></div>
+                    <div class="inline1" ></div>
+                  </div> 
+                  <div class="inlinediv3">
+                    <p class="inline2">1</p>
+                    <p class="inline2">2</p>
+                    <p class="inline2">3</p>
+                    <p class="inline2">4</p>
+                  </div>
+                </div>
+                
+             </div>
+            <!-- </div> -->
+        </div>
+        <!-- contries images -->
+        <!-- visite one countries section -->
+        <!-- 1st photo -->
+        <div class="main2">
+            <div class="visitemain">
+                <h2 class="visite1">Visite One Of Our Countries Now</h2>
+                <br>
+                <p class="visite2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <br><br><br><br>
+            </div>
+         <div class="main3">
+            <div class="main4">
+                <div class="firstimghead"> 
+                  <!-- color:white;color:gray;font-family: Poppins, sans-serif; -->
+                 <img class="firstimg1" src="../multimedia/images/country-01.jpg" alt="">
+                    <div class="firstimg2">
+                      <span class="firstimg3">
+                         <p class="explore">Explore More</p>
+                       <!-- </span> -->
+                      <span class="firstimg4">
+                        <p class="swizerland"><b>SWITZERLAND</b></p>
+                        <!-- <p class="" style=" border:2px solid rgb(27, 169, 220); width:20%; height:5vh;color: white; margin-left: 75%;display:inline;">Explore More<p> -->
+                        <p class="europe">Europe</p>
+                        <br>
+                        <p class="wooxtravel">Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+                        <br>
+                        <hr class="hrrow1">
+                        <br>
+                        <span class="headcontact" >
+                            <p class="contact"><i class="fa-solid fa-user icon"></i> 8.66 mil people</p>
+                            <p class="contact"><i class="fa-solid fa-globe icon"></i> 41.290 km2</p>
+                            <p class="contact"><i class="fa-solid fa-house icon"></i> $1.100.200</p>
+                        </span>
+                        <br>
+                        <hr class="hrrow1">
+                        <br>
+                        <p class="direction">Need Directions ?  <i class="fa-solid fa-arrow-right"></i></p>
+                      </span>
+                    </span>
+                 </div>
+               </div>  
+              <br>
+              
+              <hr class="hrrow" >
+              <br>
+              <br>
+                   <!-- 2nd photo -->
+             <div class="main5">
+                 <div class="main51"> 
+                   
+                 <img class="firstimg12" src="../multimedia/images/country-02.jpg" alt="">
+                    <div class="main52" >
+                        <span class="main53">
+                         <p class="explore2">Explore More</p>
+                      
+                      <span class="main54">
+                       
+                        <p class="caribbean"><b>CARIBBEAN</b></p>
+                        
+                        <p class="northamerika">North America</p>
+                        <br>
+                        <p class="loren">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+
+                        </p>
+                        <br>
+                        <hr class="hrrow1">
+                        <br> 
+                        <span class="headcontact">
+                            <p class="contact" ><i class="fa-solid fa-user icon"></i>  44.48 Mil People</p>
+                            <p class="contact" ><i class="fa-solid fa-globe icon"></i>  275.400 km2</p>
+                            <p class="contact" ><i class="fa-solid fa-house icon"></i> $ 946.000</p>
+                        </span>
+                        <br>
+                        <hr class="hrrow1">
+                        <br>
+                        <p class="direction2">Need Directions ?  <i class="fa-solid fa-arrow-right"></i></p>
+                      </span>
+                      </span>
+                    </div>
+                    </div>
+                    </div>
+                    <!-- <br> -->
+                    <br>
+                    <hr class="hrrow" >
+                    <br>
+                    <br>
+                    <!-- 3rd photo -->
+                    <div class="main31">
+                    
+                        <div class="main32"> 
+                           
+                        <img class="img3" src="../multimedia/images/country-03.jpg" alt="">
+                           <div class="main33">
+                               <span class="main34">
+                                <p class="explore3">Explore More</p>
+                             
+                             <span class="main35" >
+                               
+                               <p class="france"><b>FRANCE</b></p>
+                               
+                               <p class="europe3" >Europe</p>
+                               <br>
+                               <p class="wehope">We hope this WoOx template is useful for you, please support us a small amount of PayPal to info [at] templatemo.com for our survival. We really appreciate your contribution.</p>
+                               <br>
+                               <hr class="hrrow1">
+                               <br>
+                               <span class="headcontact">
+                                   <p class="contact" ><i class="fa-solid fa-user icon"></i> 67.41 mil people</p>
+                                   <p class="contact" ><i class="fa-solid fa-globe icon"></i>  551.500 km2</p>
+                                   <p class="contact"><i class="fa-solid fa-house icon"></i> $425.600</p>
+                               </span>
+                               <br>
+                               <hr class="hrrow1">
+                               <br>
+                               <p class="direction3">Need Directions ?  <i class="fa-solid fa-arrow-right"></i></p>
+                             </span>
+                           </span>
+                           </div>
+                           </div>
+                           <br><br><br>
+                           <div class="bottomnummain">
+                               <i class="fa-sharp fa-solid fa-arrow-left arrow"></i>
+                               <p class="bottomnum1">1</p>
+                               <p class="bottomnum1">2</p>
+                               <p class="bottomnum1">3</p>
+                               <i class="fa-solid fa-arrow-right arrow "></i>
+                           </div>
+                </div>
+               </div>
+                <br>
+                <div class="locationbar">
+                    <iframe class="locationimg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.4743873356842!2d-80.12135612481013!3d25.95247787723257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9add4b4ac788f%3A0xe77469d09480fcdb!2sSunny%20Isles%20Beach!5e0!3m2!1sen!2sin!4v1717516590967!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <br><br><br>
+           </div>
+       
+         </div>
+         <br><br><br><br><br><br><br>
+          <div class="bottomimg">
+            <span class="btimg1">
+               <h1 class="btimg11">ARE YOU LOOKING TO TRAVEL ?</h1>
+               <p class="btimg12"><b>Make A Reservation By Clicking The Button</b></p>
+            </span>
+            <span class="btimg2">
+                  <p class="btimg2cd1">Book Yours Now</p>
+            </span>
+          </div>
+          <div class="bottomb">
+            <span class="bottomend">
+                <p class="bottomend1">Copyright © WoOx Travel Company. All Rights Reserved.</p>
+                <p class="bottomend1">Design: TemplateMo Distribution: Themevegon</p>   
+            </span>
+              
+          </div>
+          
+     </div>
+   </div>
+</body>
+</html>
